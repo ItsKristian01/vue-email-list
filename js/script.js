@@ -13,12 +13,11 @@ createApp({
         axios
           .get("https://flynn.boolean.careers/exercises/api/random/mail")
           .then((resp) => {
-            console.log(resp);
-            this.emailList = resp.data.response;
-            console.log(this.emailList);     
-          });  
+           //console.log(resp);
+            this.emailList.push(resp.data.response);
+            console.log(this.emailList);
+          });
       }
     },
   },
 }).mount("#app");
-
